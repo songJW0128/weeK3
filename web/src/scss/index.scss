@@ -1,0 +1,56 @@
+@import "_minix.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(50px);
+    h1 {
+        text-align: center;
+        background: #fc3669;
+        color: #fff;
+        line-height: pxTorem(50px);
+    }
+}
+
+.list {
+    width: 100%;
+    height: pxTorem(50px);
+    @include box_flex;
+    li {
+        @include flex;
+        text-align: center;
+        line-height: pxTorem(50px);
+        font-size: pxTorem(18px);
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+    overflow: hidden;
+    .dls {
+        width: 100%;
+        @include box_flex;
+        @include flexWrap(wrap);
+        dl {
+            width: 50%;
+            dt {
+                width: pxTorem(180px);
+                height: pxTorem(200px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                font-size: pxTorem(18px);
+            }
+        }
+    }
+}
